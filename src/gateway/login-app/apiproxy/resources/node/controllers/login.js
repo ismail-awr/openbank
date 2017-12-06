@@ -33,6 +33,7 @@ const HTTP_URL_PATTERN = /^(http|https):\/\/.+/;
 
 
 login.loginForm = function (req, res, next) {
+    res.send("test login page.");
     var redirectUri = req.query.redirectUri;
     var state = req.query.state;
     var session = req.signedCookies[config.authCookieName];
